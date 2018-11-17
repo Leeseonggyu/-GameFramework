@@ -9,6 +9,7 @@ public:
 	~Game() {};
 	SDL_Window* g_pWindow = 0;
 	SDL_Renderer* g_pRenderer = 0;
+
 	bool init(const char*title, int xpos, int ypos, int width,
 		int height, bool fullscreen);
 
@@ -20,5 +21,10 @@ public:
 private:
 	SDL_Window * m_pWindow;
 	SDL_Renderer*m_pRenderer;
+
+	SDL_Texture*m_pTexture;
+	SDL_Rect m_sourceRectangle;
+	SDL_Rect m_destinationRectangle;
+
 	bool m_bRunning = true;
 };
