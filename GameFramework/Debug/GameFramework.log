@@ -1,3 +1,4 @@
-﻿  main.cpp
-c:\users\user\documents\-gameframework\gameframework\main.cpp(38): warning C4305: '인수': 'SDL_WindowFlags'에서 'bool'(으)로 잘립니다.
+﻿  Game.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
   GameFramework.vcxproj -> C:\Users\user\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe
