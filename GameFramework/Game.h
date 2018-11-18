@@ -3,7 +3,9 @@
 #include "TextureManager.h"
 #include "Player.h"
 #include "Enemy.h"
-#include "GameObject.h"
+#include "SDLGameObject.h"
+#include "LoaderParams.h"
+
 
 class Game
 {
@@ -17,17 +19,19 @@ public:
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
-	std::vector<GameObject*> m_gameObjects;
+	//std::vector<GameObject*> m_gameObjects;
 
 
-	GameObject* m_go;
-	GameObject* m_player;
-	GameObject* m_enemy;
+	SDLGameObject* m_go;
+	SDLGameObject* m_player;
+	SDLGameObject* m_enemy;
 
 
 private:
-	SDL_Window * m_pWindow;
-	SDL_Renderer* m_pRenderer;
+	static Game* s_pInstance;
+	typedef Game TheGame;
+	//SDL_Window * m_pWindow;
+	//SDL_Renderer* m_pRenderer;
 	bool m_bRunning;
 
 	int m_currentFrame;
