@@ -2,10 +2,7 @@
 
 InputHandler::InputHandler()
 {
-	for (int i = 0; i < 3; i++)
-	{
-		m_mouseButtonStates.push_back(false);
-	}
+	// »ý¼ºÀÚ 
 }
 
 void InputHandler::clean()
@@ -18,28 +15,18 @@ void InputHandler::update()
 	SDL_Event event;
 	while (SDL_PollEvent(&event))
 	{
-		switch (event.type)
+		if (event.type == SDL_KEYUP)
 		{
-		case SDL_QUIT:
+			m_keystates = SDL_GetKeyboardState(0);
+		}
+
+		if (event.type == SDL_KEYDOWN)
+		{
+			m_keystates = SDL_GetKeyboardState(0);
+		}
+		if (event.type == SDL_QUIT)
+		{
 			TheGame::Instance()->quit();
-			break;
-		case SDL_MOUSEMOTION:
-			onMouseMove(event);
-			break;
-		case SDL_MOUSEBUTTONDOWN:
-			onMouseButtonDown(event);
-			break;
-		case SDL_MOUSEBUTTONUP:
-			onMouseButtonUp(event);
-			break;
-		case SDL_KEYDOWN:
-			onKeyDown();
-			break;
-		case SDL_KEYUP:
-			onKeyUp();
-			break;
-		default:
-			break;
 		}
 	}
 }
@@ -55,13 +42,4 @@ bool InputHandler::isKeyDown(SDL_Scancode key)
 		}
 	}
 	return false;
-}
-bool InputHandler::getMouseButtonState(int buttonNumber)
-{
-	return m_mouseButtonStates[buttonNumber];
-}
-
-Vector2D*  InputHandler::getMousePosition()
-{
-	return m_mousePosition;
 }
