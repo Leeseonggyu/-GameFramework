@@ -1,9 +1,9 @@
 ﻿  Game.cpp
+  GameObject.cpp
   main.cpp
+  Player.cpp
   TextureManager.cpp
   코드를 생성하고 있습니다...
 Game.obj : error LNK2001: "private: static class TextureManager * TextureManager::s_pInstance" (?s_pInstance@TextureManager@@0PAV1@A) 외부 기호를 확인할 수 없습니다.
-main.obj : error LNK2019: "public: void __thiscall Game::update(void)" (?update@Game@@QAEXXZ) 외부 기호(참조 위치: _SDL_main 함수)에서 확인하지 못했습니다.
-main.obj : error LNK2019: "public: void __thiscall Game::handleEvents(void)" (?handleEvents@Game@@QAEXXZ) 외부 기호(참조 위치: _SDL_main 함수)에서 확인하지 못했습니다.
-main.obj : error LNK2019: "public: void __thiscall Game::clean(void)" (?clean@Game@@QAEXXZ) 외부 기호(참조 위치: _SDL_main 함수)에서 확인하지 못했습니다.
-C:\Users\user\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe : fatal error LNK1120: 4개의 확인할 수 없는 외부 참조입니다.
+GameObject.obj : error LNK2001: "private: static class TextureManager * TextureManager::s_pInstance" (?s_pInstance@TextureManager@@0PAV1@A) 외부 기호를 확인할 수 없습니다.
+C:\Users\user\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
