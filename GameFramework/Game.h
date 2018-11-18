@@ -2,6 +2,8 @@
 #include "SDL.h"
 #include "TextureManager.h"
 #include "Player.h"
+#include "Enemy.h"
+#include "GameObject.h"
 
 class Game
 {
@@ -15,8 +17,13 @@ public:
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
-	GameObject m_go;
-	Player m_player;
+	std::vector<GameObject*> m_gameObjects;
+
+
+	GameObject* m_go;
+	GameObject* m_player;
+	GameObject* m_enemy;
+
 
 private:
 	SDL_Window * m_pWindow;
