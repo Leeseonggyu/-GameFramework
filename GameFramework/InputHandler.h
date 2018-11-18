@@ -14,6 +14,21 @@ public:
 	}
 	void update();
 	void clean();  // 디바이스 관련 초기화된 부분을 clear 
+<<<<<<< HEAD
+=======
+	enum mouse_buttons
+	{
+		LEFT = 0,
+		MIDDLE = 1,
+		RIGHT = 2
+	};
+
+	// mouse buttion events								
+	std::vector<bool> m_mouseButtonStates;
+
+	// mouse motion event					
+	Vector2D* m_mousePosition;
+>>>>>>> parent of 8ca1a71... Add
 private:
 	InputHandler();
 	~InputHandler() {}
