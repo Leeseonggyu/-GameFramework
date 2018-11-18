@@ -1,7 +1,7 @@
 ﻿  Enemy.cpp
 c:\users\user\documents\-gameframework\gameframework\player.h(5): error C2504: 'SDLGameObject': 기본 클래스를 정의하지 않았습니다.
-c:\users\user\documents\-gameframework\gameframework\player.h(7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-c:\users\user\documents\-gameframework\gameframework\player.h(7): error C2143: 구문 오류: ','이(가) '*' 앞에 없습니다.
+c:\users\user\documents\-gameframework\gameframework\player.h(9): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+c:\users\user\documents\-gameframework\gameframework\player.h(9): error C2143: 구문 오류: ','이(가) '*' 앞에 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(25): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(25): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(25): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
@@ -11,9 +11,9 @@ c:\users\user\documents\-gameframework\gameframework\game.h(26): error C2238: ';
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(7): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
   Game.cpp
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(7): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(6): error C2270: 'getRenderer': 비멤버 함수에 한정자를 사용할 수 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(6): error C2065: 'm_pRenderer': 선언되지 않은 식별자입니다.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(10): error C2065: 's_pInstance': 선언되지 않은 식별자입니다.
@@ -27,17 +27,25 @@ c:\users\user\documents\-gameframework\gameframework\game.cpp(22): error C2065: 
 c:\users\user\documents\-gameframework\gameframework\game.cpp(22): error C2228: '.push_back' 왼쪽에는 클래스/구조체/공용 구조체가 있어야 합니다.
   c:\users\user\documents\-gameframework\gameframework\game.cpp(22): note: 'unknown-type' 형식입니다.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(28): error C2039: 'load': 'SDLGameObject'의 멤버가 아닙니다.
-  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(5): note: 'SDLGameObject' 선언을 참조하십시오.
+  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): note: 'SDLGameObject' 선언을 참조하십시오.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(29): error C2039: 'load': 'SDLGameObject'의 멤버가 아닙니다.
-  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(5): note: 'SDLGameObject' 선언을 참조하십시오.
+  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): note: 'SDLGameObject' 선언을 참조하십시오.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(30): error C2039: 'load': 'SDLGameObject'의 멤버가 아닙니다.
-  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(5): note: 'SDLGameObject' 선언을 참조하십시오.
+  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): note: 'SDLGameObject' 선언을 참조하십시오.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(46): error C2065: 'm_pRenderer': 선언되지 않은 식별자입니다.
 c:\users\user\documents\-gameframework\gameframework\game.cpp(52): error C2065: 'm_pRenderer': 선언되지 않은 식별자입니다.
+  InputHandler.cpp
+c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(29): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(29): error C2039: 'quit': 'InputHandler'의 멤버가 아닙니다.
+  c:\users\user\documents\-gameframework\gameframework\inputhandler.h(6): note: 'InputHandler' 선언을 참조하십시오.
+c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(33): error C2039: 'isKeyDown': 'InputHandler'의 멤버가 아닙니다.
+  c:\users\user\documents\-gameframework\gameframework\inputhandler.h(6): note: 'InputHandler' 선언을 참조하십시오.
+c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(35): error C2065: 'm_keystates': 선언되지 않은 식별자입니다.
+c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(36): error C2065: 'm_keystates': 선언되지 않은 식별자입니다.
   SDLGameObject.cpp
 c:\users\user\documents\-gameframework\gameframework\player.h(5): error C2504: 'SDLGameObject': 기본 클래스를 정의하지 않았습니다.
-c:\users\user\documents\-gameframework\gameframework\player.h(7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-c:\users\user\documents\-gameframework\gameframework\player.h(7): error C2143: 구문 오류: ','이(가) '*' 앞에 없습니다.
+c:\users\user\documents\-gameframework\gameframework\player.h(9): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+c:\users\user\documents\-gameframework\gameframework\player.h(9): error C2143: 구문 오류: ','이(가) '*' 앞에 없습니다.
 c:\users\user\documents\-gameframework\gameframework\enemy.h(5): error C2504: 'SDLGameObject': 기본 클래스를 정의하지 않았습니다.
 c:\users\user\documents\-gameframework\gameframework\enemy.h(7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
 c:\users\user\documents\-gameframework\gameframework\enemy.h(7): error C2143: 구문 오류: ','이(가) '*' 앞에 없습니다.
@@ -50,42 +58,38 @@ c:\users\user\documents\-gameframework\gameframework\game.h(26): error C2238: ';
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(3): error C2614: 'SDLGameObject': 멤버 초기화가 잘못되었습니다. 'GameObject'이(가) 기본 또는 멤버가 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(19): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(19): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(19): error C2227: '->getRenderer' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(19): note: 'unknown-type' 형식입니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(7): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(5): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(4): error C2614: 'SDLGameObject': 멤버 초기화가 잘못되었습니다. 'GameObject'이(가) 기본 또는 멤버가 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(20): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(20): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(20): error C2227: '->getRenderer' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(20): note: 'unknown-type' 형식입니다.
 c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(17): error C2660: 'TextureManager::drawFrame': 함수는 7개의 매개 변수를 사용하지 않습니다.
   c:\users\user\documents\-gameframework\gameframework\texturemanager.h(22): note: 'TextureManager::drawFrame' 선언을 참조하십시오.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(22): error C2653: 'GameObject': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.cpp(24): error C2065: 'm_x': 선언되지 않은 식별자입니다.
   main.cpp
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(8): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(8): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(8): error C2227: '->init' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-  c:\users\user\documents\-gameframework\gameframework\main.cpp(8): note: 'unknown-type' 형식입니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(11): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(11): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(11): error C2227: '->running' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-  c:\users\user\documents\-gameframework\gameframework\main.cpp(11): note: 'unknown-type' 형식입니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(7): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(8): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\user\documents\-gameframework\gameframework\main.cpp(13): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
 c:\users\user\documents\-gameframework\gameframework\main.cpp(13): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(13): error C2227: '->handleEvents' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(13): error C2227: '->running' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
   c:\users\user\documents\-gameframework\gameframework\main.cpp(13): note: 'unknown-type' 형식입니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(14): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(14): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(14): error C2227: '->update' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-  c:\users\user\documents\-gameframework\gameframework\main.cpp(14): note: 'unknown-type' 형식입니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(15): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(15): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(15): error C2227: '->render' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-  c:\users\user\documents\-gameframework\gameframework\main.cpp(15): note: 'unknown-type' 형식입니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(24): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(24): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-c:\users\user\documents\-gameframework\gameframework\main.cpp(24): error C2227: '->clean' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-  c:\users\user\documents\-gameframework\gameframework\main.cpp(24): note: 'unknown-type' 형식입니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(16): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(16): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(16): error C2227: '->handleEvents' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\user\documents\-gameframework\gameframework\main.cpp(16): note: 'unknown-type' 형식입니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(17): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(17): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(17): error C2227: '->update' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\user\documents\-gameframework\gameframework\main.cpp(17): note: 'unknown-type' 형식입니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(18): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(18): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(18): error C2227: '->render' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\user\documents\-gameframework\gameframework\main.cpp(18): note: 'unknown-type' 형식입니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(27): error C2653: 'TheGame': 클래스 또는 네임스페이스 이름이 아닙니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(27): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\main.cpp(27): error C2227: '->clean' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
+  c:\users\user\documents\-gameframework\gameframework\main.cpp(27): note: 'unknown-type' 형식입니다.
   Player.cpp
 c:\users\user\documents\-gameframework\gameframework\enemy.h(5): error C2504: 'SDLGameObject': 기본 클래스를 정의하지 않았습니다.
 c:\users\user\documents\-gameframework\gameframework\enemy.h(7): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
@@ -99,6 +103,14 @@ c:\users\user\documents\-gameframework\gameframework\game.h(26): error C2238: ';
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
 c:\users\user\documents\-gameframework\gameframework\game.h(27): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(6): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\sdlgameobject.h(7): error C2499: 'SDLGameObject': 클래스는 자체 기본 클래스일 수 없습니다.
+c:\users\user\documents\-gameframework\gameframework\player.cpp(12): error C2039: 'isKeyDown': 'InputHandler'의 멤버가 아닙니다.
+  c:\users\user\documents\-gameframework\gameframework\inputhandler.h(6): note: 'InputHandler' 선언을 참조하십시오.
+c:\users\user\documents\-gameframework\gameframework\player.cpp(16): error C2039: 'isKeyDown': 'InputHandler'의 멤버가 아닙니다.
+  c:\users\user\documents\-gameframework\gameframework\inputhandler.h(6): note: 'InputHandler' 선언을 참조하십시오.
+c:\users\user\documents\-gameframework\gameframework\player.cpp(20): error C2039: 'isKeyDown': 'InputHandler'의 멤버가 아닙니다.
+  c:\users\user\documents\-gameframework\gameframework\inputhandler.h(6): note: 'InputHandler' 선언을 참조하십시오.
+c:\users\user\documents\-gameframework\gameframework\player.cpp(24): error C2039: 'isKeyDown': 'InputHandler'의 멤버가 아닙니다.
+  c:\users\user\documents\-gameframework\gameframework\inputhandler.h(6): note: 'InputHandler' 선언을 참조하십시오.
   TextureManager.cpp
   코드를 생성하고 있습니다...

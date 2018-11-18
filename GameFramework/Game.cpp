@@ -81,6 +81,7 @@ void Game::update()
 void Game::clean()
 {
 	std::cout << "cleaning game\n";
+	TheInputHandler::Instance()->clean();
 	//SDL_DestroyWindow(m_pWindow);
 	//SDL_DestroyRenderer(m_pRenderer);
 	SDL_Quit();
@@ -88,6 +89,7 @@ void Game::clean()
 
 void Game::handleEvents()
 {
+	TheInputHandler::Instance()->update();
 	SDL_Event event;
 	if (SDL_PollEvent(&event))
 	{
