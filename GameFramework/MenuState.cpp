@@ -1,6 +1,10 @@
 #include "MenuState.h"
 const std::string MenuState::s_menuID = "MENU";
 
+MenuButton::MenuButton(const LoaderParams* pParams, void(*callback)()) : SDLGameObject(pParams), m_callback(callback)
+{
+}
+
 void MenuState::update()
 {
 	// nothing for now
