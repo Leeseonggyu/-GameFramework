@@ -7,6 +7,7 @@ c:\users\user\documents\-gameframework\gameframework\vector2d.h(62): warning C42
 c:\users\user\documents\-gameframework\gameframework\vector2d.h(62): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(91): warning C4244: '인수': 'Sint32'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\user\documents\-gameframework\gameframework\inputhandler.cpp(92): warning C4244: '인수': 'Sint32'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MenuButton.cpp
   MenuState.cpp
   PlayState.cpp
   SDLGameObject.cpp
