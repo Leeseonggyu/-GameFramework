@@ -1,13 +1,16 @@
 #pragma once
 #include"GameState.h"
-#include<iostream>
 
 class MenuState : public GameState
 {
 private:
-	static const std::string s_menuID;
 	static MenuState* s_pInstance;
+	MenuState() {};
+	static void s_menuToPlay();
+	static void s_exitFromMenu();
 public:
+	~MenuState() {};
+
 	virtual void update();
 	virtual void render();
 	virtual bool onEnter();
@@ -23,4 +26,8 @@ public:
 		}
 		return s_pInstance;
 	}
+
+private:
+	static const std::string s_menuID;
 };
+typedef MenuState TheMenuState;

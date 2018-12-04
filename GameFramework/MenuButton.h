@@ -1,13 +1,24 @@
 #pragma once
-#include"GameState.h"
-#include"SDLGameObject.h"
+#include "SDLGameObject.h"
 
-class MenuButton : SDLGameObject
+enum button_state
+{
+	MOUSE_OUT = 0,
+	MOUSE_OVER = 1,
+	CLICKED = 2
+};
+
+
+class MenuButton : public SDLGameObject
 {
 public:
-    void(*m_callback)();
+	//MenuButton(const LoaderParams* pParams);
+	virtual void draw();
+	virtual void update();
+	virtual void clean();
+	void(*m_callback)();
 
-    bool m_bReleased;
+	bool m_bReleased;
 
-    MenuButton(const LoaderParams* pParams, void(*callback)());
+	MenuButton(const LoaderParams* pParams, void(*callback)());
 };
