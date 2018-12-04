@@ -7,6 +7,7 @@ class PlayState : public GameState
 private:
 	static const std::string s_playID;
 	static PlayState* s_pInstance;
+	std::vector<GameObject*> m_gameObjects;
 public:
 	virtual void update();
 	virtual void render();

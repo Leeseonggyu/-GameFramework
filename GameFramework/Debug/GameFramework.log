@@ -1,5 +1,2 @@
-﻿  MenuState.cpp
-c:\users\user\documents\-gameframework\gameframework\menustate.cpp(12): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\user\documents\-gameframework\gameframework\menustate.cpp(20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\user\documents\-gameframework\gameframework\menustate.cpp(54): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+﻿  main.cpp
   GameFramework.vcxproj -> C:\Users\user\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe
