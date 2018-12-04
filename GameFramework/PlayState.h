@@ -1,18 +1,16 @@
 #pragma once
 #include "GameState.h"
-#include<iostream>
+#include "SDLGameObject.h"
+
 
 class PlayState : public GameState
 {
-private:
-	static const std::string s_playID;
-	static PlayState* s_pInstance;
-	std::vector<GameObject*> m_gameObjects;
 public:
 	virtual void update();
 	virtual void render();
 	virtual bool onEnter();
 	virtual bool onExit();
+	virtual bool checkCollision(SDLGameObject* p1, SDLGameObject* p2);
 	virtual std::string getStateID() const { return s_playID; }
 
 	static PlayState* Instance()
@@ -24,4 +22,9 @@ public:
 		}
 		return s_pInstance;
 	}
+private:
+	static const std::string s_playID;
+	static PlayState* s_pInstance;
+	std::vector<GameObject*> m_gameObjects;
 };
+typedef PlayState ThePlayState;

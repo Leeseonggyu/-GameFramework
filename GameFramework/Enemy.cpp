@@ -1,27 +1,40 @@
 #include "Enemy.h"
 #include "InputHandler.h"
+#include "Vector2D.h"
+
 
 Enemy::Enemy(const LoaderParams* pParams) : SDLGameObject(pParams)
 {
-
+	m_velocity.setY(2);
+	m_velocity.setX(1);
 }
 
 void Enemy::draw()
 {
-	SDLGameObject::draw(); // we now use SDLGameObject
+	SDLGameObject::draw();
 }
 
 void Enemy::update()
 {
-	m_position.setX(m_position.getX() + 1);
-	m_position.setY(m_position.getY() + 1);
-
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
-}
-
-void Enemy::clean()
-{
-
+	m_currentFrame = int(((SDL_GetTicks() / 100) % 5));
+	if (m_position.getY() < 0) {
+		m_velocity.setX(-2);
+		m_velocity.setY(2);
+	}
+	else if (m_position.getX() < 0)
+	{
+		m_velocity.setX(2);
+		m_velocity.setY(2);
+	}
+	else if (m_position.getY() > 400) {
+		m_velocity.setX(2);
+		m_velocity.setY(-2);
+	}
+	else if (m_position.getX() > 500) {
+		m_velocity.setX(-2);
+		m_velocity.setY(-2);
+	}
+	SDLGameObject::update();
 }
 
 void Enemy::handleInput()
@@ -31,8 +44,9 @@ void Enemy::handleInput()
 		m_velocity.setX(1);
 	}
 
-	// void Enemy::handleInput() 추가 : 마우스 motion
 	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
-	m_velocity = (*vec - m_position) / 100;
-
+	m_velocity = (*vec - m_position) / 100.0f;
+}
+void Enemy::clean()
+{
 }
