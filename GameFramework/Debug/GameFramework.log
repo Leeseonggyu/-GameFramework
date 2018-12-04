@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  PauseState.cpp
+c:\users\user\documents\-gameframework\gameframework\pausestate.cpp(20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\user\documents\-gameframework\gameframework\pausestate.cpp(28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\user\documents\-gameframework\gameframework\pausestate.cpp(56): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  main.cpp
+  코드를 생성하고 있습니다...
   GameFramework.vcxproj -> C:\Users\user\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe

@@ -19,6 +19,10 @@ void InputHandler::clean()
 	// 향후 추가 
 }
 
+void InputHandler::reset()
+{
+}
+
 void InputHandler::update()
 {
 	SDL_Event event;
