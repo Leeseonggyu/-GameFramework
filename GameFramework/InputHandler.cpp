@@ -1,5 +1,6 @@
 #include "InputHandler.h"
 #include "Game.h"
+#include "PauseState.h"
 
 InputHandler* InputHandler::s_pInstance = NULL;
 
@@ -49,6 +50,9 @@ void InputHandler::update()
 		case SDL_KEYUP:
 			onKeyUp();
 			break;
+        case SDLK_ESCAPE:
+            PauseState().onEnter;
+            break;
 		default:
 			break;
 		}

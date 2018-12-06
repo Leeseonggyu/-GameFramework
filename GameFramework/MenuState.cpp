@@ -25,6 +25,7 @@ void MenuState::render()
 
 bool MenuState::onEnter()
 {
+    SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 255, 0, 0, 255);
 	if (!TheTextureManager::Instance()->load("assets/button.png",
 		"playbutton", TheGame::Instance()->getRenderer()))
 	{
@@ -51,6 +52,7 @@ bool MenuState::onEnter()
 
 bool MenuState::onExit()
 {
+    SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 0, 0, 0, 255);
 	for (int i = 0; i < m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->clean();
