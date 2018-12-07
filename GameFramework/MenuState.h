@@ -16,7 +16,7 @@ public:
 	virtual bool onEnter();
 	virtual bool onExit();
 	virtual std::string getStateID() const { return s_menuID; }
-
+	SDL_Texture*m_pTexture;
 	static MenuState* Instance()
 	{
 		if (s_pInstance == 0)

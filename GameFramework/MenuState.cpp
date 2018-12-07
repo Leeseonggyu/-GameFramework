@@ -3,6 +3,7 @@
 #include "TextureManager.h"
 #include "Game.h"
 #include "PlayState.h"
+#include<SDL_image.h>
 
 const std::string MenuState::s_menuID = "MENU";
 MenuState* MenuState::s_pInstance = 0;
@@ -25,7 +26,15 @@ void MenuState::render()
 
 bool MenuState::onEnter()
 {
-    SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 255, 0, 0, 255);
+	if (!TheTextureManager::Instance()->load("battleback.png", "back", TheGame::Instance()->getRenderer()))
+	{
+		return false;
+	}
+	
+	SDL_Surface*pTempSurface = IMG_Load("assets/battleback.png");
+	m_pTexture = SDL_CreateTextureFromSurface(TheGame::Instance()->getRenderer(), pTempSurface);
+
+	//SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 255, 0, 0, 255);
 	if (!TheTextureManager::Instance()->load("assets/button.png",
 		"playbutton", TheGame::Instance()->getRenderer()))
 	{
