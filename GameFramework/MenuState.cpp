@@ -18,34 +18,33 @@ void MenuState::update()
 
 void MenuState::render()
 {
+   
+
     for (int i = 0; i < m_gameObjects.size(); i++)
     {
         m_gameObjects[i]->draw();
     }
+
+    SDL_RenderPresent(TheGame::Instance()->getRenderer());
 }
 
 bool MenuState::onEnter()
 {
-    /*
-    if (!TheTextureManager::Instance()->load("battleback.png", "back", TheGame::Instance()->getRenderer()))
+    
+
+    if (!TheTextureManager::Instance()->load("assets/battleback.png", "back",
+        TheGame::Instance()->getRenderer()))
     {
         return false;
     }
 
-    SDL_Surface*pTempSurface = IMG_Load("assets/battleback.png");
-    m_pTexture = SDL_CreateTextureFromSurface(TheGame::Instance()->getRenderer(), pTempSurface);
-
-    SDL_FreeSurface(pTempSurface);
-    SDL_QueryTexture(m_pTexture, NULL, NULL, &m_sourceRectangle.w, &m_sourceRectangle.h);
     m_sourceRectangle.w = 853;
     m_sourceRectangle.h = 480;
 
-    TheTextureManager::Instance()->draw("back", 100, 100, m_sourceRectangle.w, m_sourceRectangle.y,
-        TheGame::Instance()->getRenderer());
-
-    SDL_RenderPresent(TheGame::Instance()->getRenderer());
-    */
     SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 255, 0, 0, 255);
+
+    
+
     if (!TheTextureManager::Instance()->load("assets/button.png",
         "playbutton", TheGame::Instance()->getRenderer()))
     {
@@ -56,6 +55,7 @@ bool MenuState::onEnter()
     {
         return false;
     }
+
     GameObject* button1 = new MenuButton(
         new LoaderParams(100, 100, 400, 100, "playbutton"),
         s_menuToPlay);
@@ -63,6 +63,7 @@ bool MenuState::onEnter()
     GameObject* button2 = new MenuButton(
         new LoaderParams(100, 300, 400, 100, "exitbutton"),
         s_exitFromMenu);
+
 
     m_gameObjects.push_back(button1);
     m_gameObjects.push_back(button2);
@@ -88,7 +89,8 @@ bool MenuState::onExit()
 
 void MenuState::s_menuToPlay()
 {
-    TheGame::Instance()->getStateMachine()->changeState(new PlayState());
+
+    TheGame::Instance()->getStateMachine()->changeState(PlayState::Instance());
 }
 
 void MenuState::s_exitFromMenu()
