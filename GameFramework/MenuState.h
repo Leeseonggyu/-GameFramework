@@ -26,7 +26,7 @@ public:
 		}
 		return s_pInstance;
 	}
-
+    SDL_Rect m_sourceRectangle;
 private:
 	static const std::string s_menuID;
 };

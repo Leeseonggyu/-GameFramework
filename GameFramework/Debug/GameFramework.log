@@ -1,17 +1,5 @@
 ﻿  MenuState.cpp
-c:\users\329\documents\-gameframework\gameframework\menustate.cpp(13): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\329\documents\-gameframework\gameframework\menustate.cpp(21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\329\documents\-gameframework\gameframework\menustate.cpp(65): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  PauseState.cpp
-c:\users\329\documents\-gameframework\gameframework\pausestate.cpp(20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\329\documents\-gameframework\gameframework\pausestate.cpp(28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\329\documents\-gameframework\gameframework\pausestate.cpp(56): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  GameOverState.cpp
-c:\users\329\documents\-gameframework\gameframework\gameoverstate.cpp(12): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\329\documents\-gameframework\gameframework\gameoverstate.cpp(20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\329\documents\-gameframework\gameframework\gameoverstate.cpp(28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  Game.cpp
-  코드를 생성하고 있습니다...
-  GameFramework.vcxproj -> C:\Users\329\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe
+c:\users\user\documents\-gameframework\gameframework\menustate.cpp(13): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\user\documents\-gameframework\gameframework\menustate.cpp(21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\user\documents\-gameframework\gameframework\menustate.cpp(76): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  GameFramework.vcxproj -> C:\Users\user\Documents\-GameFramework\GameFramework\Debug\GameFramework.exe
