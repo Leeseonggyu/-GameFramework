@@ -6,6 +6,7 @@
 #include "AnimatedGraphic.h"
 
 const std::string GameOverState::s_gameOverID = "GAMEOVER";
+GameOverState* GameOverState::s_pInstance = NULL;
 
 void GameOverState::update()
 {

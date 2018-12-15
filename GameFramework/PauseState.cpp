@@ -4,7 +4,7 @@
 #include "MenuButton.h"
 
 const std::string PauseState::s_pauseID = "PAUSE";
-
+PauseState* PauseState::s_pInstance = NULL;
 void PauseState::s_pauseToMain()
 {
 	TheGame::Instance()->getStateMachine()->changeState(MenuState::Instance());

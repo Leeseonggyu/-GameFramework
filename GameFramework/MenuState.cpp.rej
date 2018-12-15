@@ -1,0 +1,9 @@
+diff a/GameFramework/MenuState.cpp b/GameFramework/MenuState.cpp	(rejected hunks)
+@@ -52,6 +52,7 @@
+ 
+ bool MenuState::onExit()
+ {
++    SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 0, 0, 0, 255);
+ 	for (int i = 0; i < m_gameObjects.size(); i++)
+ 	{
+ 		m_gameObjects[i]->clean();

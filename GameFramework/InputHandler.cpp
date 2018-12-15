@@ -1,5 +1,6 @@
 #include "InputHandler.h"
 #include "Game.h"
+#include "PauseState.h"
 
 InputHandler* InputHandler::s_pInstance = NULL;
 
