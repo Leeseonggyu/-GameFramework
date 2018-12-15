@@ -57,3 +57,4 @@ ipch/
 *.pidb
 *.svclog
 *.scc
+.vs/slnx.sqlite
