@@ -8,6 +8,7 @@ private:
 	MenuState() {};
 	static void s_menuToPlay();
 	static void s_exitFromMenu();
+	static const std::string s_menuID;
 public:
 	~MenuState() {};
 
@@ -26,8 +27,5 @@ public:
 		}
 		return s_pInstance;
 	}
-    SDL_Rect m_sourceRectangle;
-private:
-	static const std::string s_menuID;
 };
 typedef MenuState TheMenuState;

@@ -3,9 +3,11 @@
 #include "PauseState.h"
 #include "SDLGameObject.h"
 #include "GameOverState.h"
+#include <SDL.h>
 
 const std::string PlayState::s_playID = "PLAY";
 PlayState* PlayState::s_pInstance = NULL;
+
 bool PlayState::checkCollision(SDLGameObject* p1, SDLGameObject* p2)
 {
 	int leftA, leftB;
@@ -34,7 +36,7 @@ bool PlayState::checkCollision(SDLGameObject* p1, SDLGameObject* p2)
 
 void PlayState::update()
 {
-	
+
 	for (int i = 0; i < m_gameObjects.size(); i++) {
 		m_gameObjects[i]->update();
 	}
@@ -45,10 +47,10 @@ void PlayState::update()
 		TheGame::Instance()->getStateMachine()->changeState(GameOverState::Instance());
 	}
 
-    if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
-    {
-        TheGame::Instance()->getStateMachine()->changeState(PauseState::Instance());
-    }
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
+	{
+		TheGame::Instance()->getStateMachine()->changeState(PauseState::Instance());
+	}
 }
 
 void PlayState::render()
@@ -61,6 +63,13 @@ void PlayState::render()
 
 bool PlayState::onEnter()
 {
+	//SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 255, 0, 0, 255);
+	if (!TheTextureManager::Instance()->load("assets/battleback.png",
+		"back", TheGame::Instance()->getRenderer()))
+	{
+		return false;
+	}
+
 	if (!TheTextureManager::Instance()->load("assets/helicopter.png",
 		"helicopter", TheGame::Instance()->getRenderer())) {
 		return false;
@@ -68,12 +77,18 @@ bool PlayState::onEnter()
 	if (!TheTextureManager::Instance()->load("assets/helicopter2.png",
 		"helicopter2", TheGame::Instance()->getRenderer())) {
 		return false;
-	}
+	};
+	GameObject* background = new Background(new LoaderParams(0, 0, 853, 480, "back"));
+	
 	GameObject* player = new Player(
 		new LoaderParams(500, 100, 128, 55, "helicopter"));
 	GameObject* enemy = new Enemy(
 		new LoaderParams(100, 100, 128, 55, "helicopter2"));
+
+	//배경 이미지 출력 실패 게임 오브젝트로 출력시 충돌로 게임 오버 일어남
+	//m_gameObjects.push_back(background);
 	m_gameObjects.push_back(player);
+	m_gameObjects.push_back(enemy);
 	m_gameObjects.push_back(enemy);
 	std::cout << "entering PlayState\n";
 	return true;
@@ -84,7 +99,7 @@ bool PlayState::onExit()
 	for (int i = 0; i < m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->clean();
-	}
+	};
 	m_gameObjects.clear();
 
 	TheTextureManager::Instance()->clearFromTextureMap("helicopter");

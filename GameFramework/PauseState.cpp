@@ -33,6 +33,7 @@ void PauseState::render()
 
 bool PauseState::onEnter()
 {
+	SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 100, 220, 20, 100);
 	if (!TheTextureManager::Instance()->load("assets/resume.png",
 		"resumebutton", TheGame::Instance()->getRenderer())) {
 		return false;
@@ -42,9 +43,9 @@ bool PauseState::onEnter()
 		return false;
 	}
 	GameObject* button1 = new MenuButton(new
-		LoaderParams(200, 100, 200, 80, "mainbutton"), s_pauseToMain);
+		LoaderParams(320, 100, 200, 80, "mainbutton"), s_pauseToMain);
 	GameObject* button2 = new MenuButton(new
-		LoaderParams(200, 300, 200, 80, "resumebutton"), s_resumePlay);
+		LoaderParams(320, 300, 200, 80, "resumebutton"), s_resumePlay);
 	m_gameObjects.push_back(button1);
 	m_gameObjects.push_back(button2);
 	std::cout << "entering PauseState\n";
@@ -53,6 +54,7 @@ bool PauseState::onEnter()
 
 bool PauseState::onExit()
 {
+	SDL_SetRenderDrawColor(TheGame::Instance()->getRenderer(), 0, 0, 0, 255);
 	for (int i = 0; i < m_gameObjects.size(); i++)
 	{
 		m_gameObjects[i]->clean();
@@ -67,4 +69,3 @@ bool PauseState::onExit()
 	std::cout << "exiting PauseState\n";
 	return true;
 }
-
